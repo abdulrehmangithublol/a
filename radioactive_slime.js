@@ -1,7 +1,8 @@
-// radioactive_slime.js
+// radslime_mod.js
 
 // Add new element: Radioactive Slime
-elements.radioactive_slime = {
+elements.radslime = {
+    name: "Radioactive Slime", // Pretty display name
     color: "#00ff00",
     behavior: behaviors.LIQUID,
     category: "liquids",
@@ -21,13 +22,14 @@ elements.radioactive_slime = {
 if (!elements.water.reactions) {
     elements.water.reactions = {};
 }
-elements.water.reactions.radioactive_slime = { elem1: "radioactive_slime", elem2: "radioactive_slime" };
+elements.water.reactions.radslime = { elem1: "radslime", elem2: "radslime" };
 
 // Tool to spread radioactive slime instantly
-elements.slime_spreader = {
+elements.slimespreader = {
+    name: "Slime Spreader",
     color: "#55ff55",
     tool: function(pixel) {
-        pixel.element = "radioactive_slime";
+        pixel.element = "radslime";
     },
     category: "tools",
 };
